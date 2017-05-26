@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    var nitroEquip = ["Gas","Regulator","Slang","Tapptorn","Tappmunstycke","Fat","Fatkoppling"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +23,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return nitroEquip.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Hello"
+        cell.textLabel?.text = nitroEquip[indexPath.row]
         return cell
         
     }
