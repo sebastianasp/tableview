@@ -12,7 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var nitroEquip = ["Gas","Regulator","Slang","Tapptorn","Tappmunstycke","Fat","Fatkoppling"]
+    var nitroEquip = [
+        "Step 1\n The installation",
+        "Step 2\n Turn on gas",
+        "Step 3\n The shake",
+        "Step 4\n Serve",
+        "Step 5\n Drink",
+        "Step 6\n Refill"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +41,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let nitroE = nitroEquip[indexPath.row]
         performSegue(withIdentifier: "tableViewSegue", sender: nitroE)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(sender)
+        let defVC = segue.destination as! DefinitionViewController
+        defVC.emoji = sender as! String
     }
     
     override func didReceiveMemoryWarning() {

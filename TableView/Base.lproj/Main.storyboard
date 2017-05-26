@@ -56,14 +56,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njc-pw-ZXR">
-                                <rect key="frame" x="78.5" y="125" width="218" height="239"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njc-pw-ZXR">
+                                <rect key="frame" x="120.5" y="125" width="135.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earth globe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-Uf-LWQ">
-                                <rect key="frame" x="133.5" y="411" width="108" height="26"/>
+                                <rect key="frame" x="133.5" y="232" width="108" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,6 +77,10 @@
                             <constraint firstItem="QoO-Uf-LWQ" firstAttribute="top" secondItem="Njc-pw-ZXR" secondAttribute="bottom" constant="47" id="zMU-tt-EqR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="QoO-Uf-LWQ" id="207-aB-B8D"/>
+                        <outlet property="emojiLabel" destination="Njc-pw-ZXR" id="sVU-bX-exm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zca-Do-viM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
