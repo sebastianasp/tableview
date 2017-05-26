@@ -34,7 +34,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "tableViewSegue", sender: "")
+        let nitroE = nitroEquip[indexPath.row]
+        performSegue(withIdentifier: "tableViewSegue", sender: nitroE)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(sender)
     }
     
     override func didReceiveMemoryWarning() {
