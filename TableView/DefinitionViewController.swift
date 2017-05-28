@@ -10,11 +10,13 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
     
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     
-    var emoji = "no emoji"
+    var emoji = NitroClass()
     
     
     
@@ -23,31 +25,11 @@ class DefinitionViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.header
+        definitionLabel.text = emoji.definition
+        categoryLabel.text = emoji.category
+        yearLabel.text = "\(emoji.year)"
         
-        if emoji == "Step 1\n The installation" {
-            definitionLabel.text = "Please plugin in the gas..."
-        }
-        
-        if emoji == "Step 2 - Turn on gas" {
-            definitionLabel.text = "Please plugin in..."
-        }
-        
-        if emoji == "Step 3 - The shake" {
-            definitionLabel.text = "Please plugin in..."
-        }
-        
-        if emoji == "Step 4 - Serve" {
-            definitionLabel.text = "Please plugin in..."
-        }
-        
-        if emoji == "Step 5 - Drink" {
-            definitionLabel.text = "Please plugin in..."
-        }
-        
-        if emoji == "Step 6 - Refill" {
-            definitionLabel.text = "Please plugin in..."
-        }
         
         
         

@@ -68,18 +68,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5g-sN-C3g">
+                                <rect key="frame" x="144" y="320" width="87" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthyear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viX-xi-lNG">
+                                <rect key="frame" x="145" y="408" width="85" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U5g-sN-C3g" firstAttribute="centerX" secondItem="B0G-pS-t3N" secondAttribute="centerX" id="8i8-Wg-IWW"/>
+                            <constraint firstItem="U5g-sN-C3g" firstAttribute="top" secondItem="QoO-Uf-LWQ" secondAttribute="bottom" constant="62" id="OVX-yv-COT"/>
                             <constraint firstItem="Njc-pw-ZXR" firstAttribute="top" secondItem="Qmj-bw-Dyc" secondAttribute="bottom" constant="61" id="UkH-Xm-AZd"/>
                             <constraint firstItem="QoO-Uf-LWQ" firstAttribute="centerX" secondItem="B0G-pS-t3N" secondAttribute="centerX" id="gGa-8W-8zm"/>
                             <constraint firstItem="Njc-pw-ZXR" firstAttribute="centerX" secondItem="B0G-pS-t3N" secondAttribute="centerX" id="i23-jM-1d9"/>
+                            <constraint firstItem="viX-xi-lNG" firstAttribute="top" secondItem="U5g-sN-C3g" secondAttribute="bottom" constant="62" id="jDu-2P-uoE"/>
+                            <constraint firstItem="viX-xi-lNG" firstAttribute="centerX" secondItem="B0G-pS-t3N" secondAttribute="centerX" id="qFZ-W1-EuW"/>
                             <constraint firstItem="QoO-Uf-LWQ" firstAttribute="top" secondItem="Njc-pw-ZXR" secondAttribute="bottom" constant="47" id="zMU-tt-EqR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="U5g-sN-C3g" id="Sdq-2P-30p"/>
                         <outlet property="definitionLabel" destination="QoO-Uf-LWQ" id="207-aB-B8D"/>
                         <outlet property="emojiLabel" destination="Njc-pw-ZXR" id="sVU-bX-exm"/>
+                        <outlet property="yearLabel" destination="viX-xi-lNG" id="Q8c-NR-lRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zca-Do-viM" userLabel="First Responder" sceneMemberID="firstResponder"/>

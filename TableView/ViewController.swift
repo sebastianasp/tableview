@@ -12,14 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var nitroEquip = [
-        "Step 1\n The installation",
-        "Step 2\n Turn on gas",
-        "Step 3\n The shake",
-        "Step 4\n Serve",
-        "Step 5\n Drink",
-        "Step 6\n Refill"
-    ]
+    var nitroEquip : [NitroClass] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        nitroEquip = makeNitroArray()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,20 +29,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = nitroEquip[indexPath.row]
+        let equip = nitroEquip[indexPath.row]
+        cell.textLabel?.text = equip.header
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let nitroE = nitroEquip[indexPath.row]
-        performSegue(withIdentifier: "tableViewSegue", sender: nitroE)
+        let equipment = nitroEquip[indexPath.row]
+        performSegue(withIdentifier: "tableViewSegue", sender: equipment)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let defVC = segue.destination as! DefinitionViewController
-        defVC.emoji = sender as! String
+        defVC.emoji = sender as! NitroClass
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,6 +51,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func makeNitroArray() -> [NitroClass] {
+        let Step1 = NitroClass()
+        Step1.header = "Step 1"
+        Step1.definition = "The Installation"
+        Step1.category = "Plug in"
+        Step1.year = 2017
+        
+        let Step2 = NitroClass()
+        Step2.header = "Step 2"
+        Step2.definition = "The Installation"
+        Step2.category = "Plug in"
+        Step2.year = 2013
+        
+        let Step3 = NitroClass()
+        Step3.header = "Step 3"
+        Step3.definition = "The Installation"
+        Step3.category = "Plug in"
+        Step3.year = 2010
+        
+        return [Step1,Step2,Step3]
+    }
 }
 

@@ -13,6 +13,7 @@
 		51E7896C1ED8C646004D077F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E7896B1ED8C646004D077F /* Assets.xcassets */; };
 		51E7896F1ED8C646004D077F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E7896D1ED8C646004D077F /* LaunchScreen.storyboard */; };
 		51E789771ED8D9A5004D077F /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E789761ED8D9A5004D077F /* DefinitionViewController.swift */; };
+		51FED4FB1EDB7C3A0007FD82 /* NitroEquip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FED4FA1EDB7C3A0007FD82 /* NitroEquip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		51E7896E1ED8C646004D077F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51E789701ED8C646004D077F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51E789761ED8D9A5004D077F /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
+		51FED4FA1EDB7C3A0007FD82 /* NitroEquip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NitroEquip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				51E789641ED8C646004D077F /* AppDelegate.swift */,
 				51E789661ED8C646004D077F /* ViewController.swift */,
 				51E789761ED8D9A5004D077F /* DefinitionViewController.swift */,
+				51FED4FA1EDB7C3A0007FD82 /* NitroEquip.swift */,
 				51E789681ED8C646004D077F /* Main.storyboard */,
 				51E7896B1ED8C646004D077F /* Assets.xcassets */,
 				51E7896D1ED8C646004D077F /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				51E789671ED8C646004D077F /* ViewController.swift in Sources */,
 				51E789771ED8D9A5004D077F /* DefinitionViewController.swift in Sources */,
 				51E789651ED8C646004D077F /* AppDelegate.swift in Sources */,
+				51FED4FB1EDB7C3A0007FD82 /* NitroEquip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				51E789751ED8C646004D077F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
