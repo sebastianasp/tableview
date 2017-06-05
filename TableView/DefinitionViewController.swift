@@ -18,8 +18,6 @@ class DefinitionViewController: UIViewController {
     
     var emoji = NitroClass()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,8 +29,6 @@ class DefinitionViewController: UIViewController {
         yearLabel.text = "\(emoji.year)"
         
         
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,14 +36,4 @@ class DefinitionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
 }
-
-
-//"Step 2 - Turn on gas",
-//"Step 3 - The shake",
-//"Step 4 - Serve",
-//"Step 5 - Drink",
-//"Step 6 - Refill"
